@@ -10,12 +10,13 @@ require('dotenv').config();
     var key = process.env.speechservicekey;
     var region = process.env.region;
     var audioFile = "YourAudioFile.wav";
+    var voice = process.env.voice;
 
     const speechConfig = sdk.SpeechConfig.fromSubscription(key, region);
     const audioConfig = sdk.AudioConfig.fromAudioFileOutput(audioFile);
 
     // The language of the voice that speaks.
-    speechConfig.speechSynthesisVoiceName = "bg-BG-KalinaNeural"; 
+    speechConfig.speechSynthesisVoiceName = ; 
 
     // Create the speech synthesizer.
     var synthesizer = new sdk.SpeechSynthesizer(speechConfig, audioConfig);
